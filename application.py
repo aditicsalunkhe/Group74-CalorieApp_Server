@@ -163,7 +163,7 @@ def my_enrolled_workouts():
 @a.app.route("/profile", methods=['GET', 'POST'])
 def profile():
     email = session.get('email')
-
+    # If the session email is not null, then retrieve the profile of currently logged in user, from the database.
     if email is not None:
         myProfile = mongo.db.profile.find_one({'email': email}, {'email', 'height', 'weight', 'target_weight', 'goal'})
         weight = myProfile['weight']
