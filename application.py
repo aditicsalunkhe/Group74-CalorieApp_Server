@@ -162,7 +162,18 @@ def my_enrolled_workouts():
 
 @a.app.route("/profile", methods=['GET', 'POST'])
 def profile():
-    return render_template('display_profile.html')
+    email = session.get('email')
+
+    if email is not None:
+        myProfile = mongo.db.profile.find_one({'email': email}, {'email', 'height', 'weight', 'target_weight', 'goal'})
+        weight = myProfile['weight']
+        height = myProfile['height']
+        target_weight = myProfile['target_weight']
+        goal = myProfile['goal']
+        return render_template('display_profile.html', weight=weight, height=height, goal=goal, target_weight=target_weight)
+
+    return redirect(url_for('login'))
+
 
 @a.app.route("/edit_profile", methods=['GET', 'POST'])
 def edit_profile():
@@ -182,22 +193,22 @@ def edit_profile():
                 height = request.form.get('height')
                 goal = request.form.get('goal')
                 target_weight = request.form.get('target_weight')
-                temp = mongo.db.profile.find_one({'email': email})
+                temp = mongo.db.profile.find_one({'email': email}, {'email', 'weight', 'height', 'target_weight', 'goal'})
                 if temp is not None:
-                    mongo.db.profile.update({'email': email},
-                                            {'$set': {'weight': temp['weight'],
-                                                      'height': temp['height'],
-                                                      'goal': temp['goal'],
-                                                      'target_weight': temp['target_weight']}})
+                    mongo.db.profile.update_one({'email': email},
+                                            {'$set': {'weight': weight,
+                                                      'height': height,
+                                                      'goal': goal,
+                                                      'target_weight': target_weight}})
+                    print(mongo.db.profile.find_one({'email': email}, {'email', 'weight', 'height', 'target_weight', 'goal'}))
                 else:
-                    mongo.db.profile.insert({'email': email,
+                    mongo.db.profile.insert_one({'email': email,
                                              'height': height,
                                              'weight': weight,
                                              'goal': goal,
                                              'target_weight': target_weight})
-
-            flash(f'User Profile Updated', 'success')
-            return render_template('display_profile.html', status=True, form=form)
+                flash(f'User Profile Updated', 'success')
+            return render_template('display_profile.html', status=True, form=form, height=height, weight=weight, target_weight=target_weight)
     else:
         return redirect(url_for('login'))
     return render_template('user_profile.html', status=True, form=form)
@@ -753,29 +764,6 @@ def reset_password(token):
         return redirect(url_for('login'))  # Redirect to the login page
     
     return render_template('reset_password.html', form=form, token=token, error=error)
-
-# @a.app.route("/ajaxdashboard", methods=['POST'])
-# def ajaxdashboard():
-#     # ############################
-#     # login() function displays the Login form (login.html) template
-#     # route "/login" will redirect to login() function.
-#     # LoginForm() called and if the form is submitted then various values are fetched and verified from the database entries
-#     # Input: Email, Password, Login Type
-#     # Output: Account Authentication and redirecting to Dashboard
-#     # ##########################
-#     email = get_session = session.get('email')
-#     print(email)
-#     if get_session is not None:
-#         if request.method == "POST":
-#             result = mongo.db.user.find_one(
-#                 {'email': email}, {'email', 'Status'})
-#             if result:
-#                 return json.dumps({'email': result['email'], 'Status': result['result']}), 200, {
-#                     'ContentType': 'application/json'}
-#             else:
-#                 return json.dumps({'email': "", 'Status': ""}), 200, {
-#                     'ContentType': 'application/json'}
-
 
 if __name__ == '__main__':
     a.app.run(debug=True)
