@@ -68,7 +68,7 @@ class UserProfileForm(FlaskForm):
             DataRequired(), Length(
                 min=2, max=20)])
     goal = StringField(
-        'Goal', validators=[
+        'Describe your goal', validators=[
             DataRequired(), Length(
                 min=2, max=20)])
     target_weight = StringField(
