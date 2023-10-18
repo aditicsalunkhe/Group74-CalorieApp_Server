@@ -1,7 +1,6 @@
 name: Format
 on:
-  pull_request: 
-    branches: [main]
+  push:
     paths:
     - '**.py'
 jobs:
@@ -22,8 +21,8 @@ jobs:
       - name: Push changes
         if: steps.git-check.outputs.modified == 'true'
         run: |
-          git config --global user.name 'Aditi Salunkhe'
-          git config --global user.email 'salunkheaditi99@gmail.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ aditicsalunkhe/Group74-CalorieApp_Server }}
+          git config --global user.name 'Aditi Salunkhe' 
+          git config --global user.email 'acsalunk@ncsu.edu' 
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git commit -am "Automated autoyapf fixes"
           git push
