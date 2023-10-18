@@ -49,7 +49,7 @@ def login():
     login() function displays the Login form (login.html) template
     route "/login" will redirect to login() function.
     LoginForm() called and if the form is submitted then various values are fetched and verified from the database entries
-    Input: Email, Password, Login Type
+    Input: Email, Password, Login Type.
     Output: Account Authentication and redirecting to Dashboard
     """
     
