@@ -22,7 +22,7 @@ jobs:
         if: steps.git-check.outputs.modified == 'true'
         run: |
           git config --global user.name 'Aditi Salunkhe' 
-          git config --global user.email 'acsalunk@ncsu.edu' 
+          git config --global user.email 'salunkheaditi99@gmail.com' 
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.repository_name }}
           git commit -am "Automated autoyapf fixes"
           git push
