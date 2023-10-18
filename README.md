@@ -5,16 +5,16 @@ https://drive.google.com/drive/folders/1M5vdCwH11C-MqK8X-Dkf5bPR0SaWA5Yc?usp=sha
 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![DOI](https://www.zenodo.org/badge/419132821.svg)](https://www.zenodo.org/badge/latestdoi/419132821)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10020032.svg)](https://doi.org/10.5281/zenodo.10020032).
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Build Status](https://app.travis-ci.com/atharva1996/calorieApp_server.svg?branch=main)](https://app.travis-ci.com/atharva1996/calorieApp_server)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 ![last commit](https://img.shields.io/github/last-commit/atharva1996/calorieApp_server)
 ![total lines](https://img.shields.io/tokei/lines/github/atharva1996/calorieApp_server)
-![github workflow](https://github.com/deekay2310/calorieApp_server/actions/workflows/unit_test.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/calorieApp_server/actions/workflows/style_checker.yml/badge.svg)
-![github workflow](https://github.com/deekay2310/calorieApp_server/actions/workflows/syntax_checker.yml/badge.svg)
-[![codecov](https://codecov.io/gh/deekay2310/calorieApp_server/branch/main/graph/badge.svg?token=IQW5PLLE22)](https://codecov.io/gh/deekay2310/calorieApp_server)
+![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/unit_test.yml/badge.svg)
+![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/style_checker.yml/badge.svg)
+![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/syntax_checker.yml/badge.svg)
+[![codecov](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server/branch/main/graph/badge.svg?token=IQW5PLLE22)](https://codecov.io/gh/deekay2310/calorieApp_server)
 <!--Badges-->
 <a href="https://github.com/deekay2310/calorieApp_server/fork" target="blank">
 <img src="https://img.shields.io/github/forks/deekay2310/calorieApp_server?style=flat-square" alt="calorieApp_server forks"/>
