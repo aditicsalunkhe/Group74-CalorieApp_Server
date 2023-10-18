@@ -158,7 +158,16 @@ def calories():
 
 @a.app.route("/my_enrolled_workouts", methods=['GET', 'POST'])
 def my_enrolled_workouts():
-    return render_template('display_profile.html')
+    email = session.get('email')
+    try:
+        workout_data = list(mongo.db.enrolled_workout.find({"Email" : email}, {"_id",'Email','Status'}))
+        if workout_data is None:
+            raise Exception("No data found for the given email")
+        workout_data = list(workout_data)
+    except Exception as e:
+        return render_template('error.html', error_message=str(e))
+    return render_template('enrolled_workouts.html', data=workout_data)
+
 
 @a.app.route("/profile", methods=['GET', 'POST'])
 def profile():
