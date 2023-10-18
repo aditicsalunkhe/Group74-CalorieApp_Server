@@ -162,6 +162,11 @@ def my_enrolled_workouts():
 
 @a.app.route("/profile", methods=['GET', 'POST'])
 def profile():
+    """
+    profile() function displays the profile of the user as stored in the database. (display_profile.html template)
+    route "/profile" will redirect to profile() function.
+    Output: Profile displayed as per the database and the page gives an option to edit the profile.
+    """
     email = session.get('email')
     # If the session email is not null, then retrieve the profile of currently logged in user, from the database.
     if email is not None:
@@ -171,7 +176,7 @@ def profile():
         target_weight = myProfile['target_weight']
         goal = myProfile['goal']
         return render_template('display_profile.html', weight=weight, height=height, goal=goal, target_weight=target_weight)
-
+    
     return redirect(url_for('login'))
 
 
