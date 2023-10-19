@@ -103,16 +103,17 @@ def register():
         return redirect(url_for('home'))
     return render_template('register.html', title='Register', form=form)
 
-
+"""
 @a.app.route("/calories", methods=['GET', 'POST'])
 def calories():
-    """
-    calorie() function displays the Calorieform (calories.html) template
-    route "/calories" will redirect to calories() function.
-    CalorieForm() called and if the form is submitted then various values are fetched and updated into the database entries
-    Input: Email, date, food, burnout
-    Output: Value update in database and redirected to home page
-    """
+    # ############################
+    # calorie() function displays the Calorieform (calories.html) template
+    # route "/calories" will redirect to calories() function.
+    # CalorieForm() called and if the form is submitted then various values are fetched and updated into the database entries
+    # Input: Email, date, food, burnout
+    # Output: Value update in database and redirected to home page
+    # ############################
+    
     now = datetime.now()
     now = now.strftime('%Y-%m-%d')
     get_session = session.get('email')
@@ -144,6 +145,8 @@ def calories():
     else:
         return redirect(url_for('home'))
     return render_template('calories.html', form=form, time=now)
+
+"""
 
 @a.app.route("/my_enrolled_workouts", methods=['GET', 'POST'])
 def my_enrolled_workouts():
@@ -224,7 +227,7 @@ def edit_profile():
         return redirect(url_for('login'))
     return render_template('user_profile.html', status=True, form=form)
 
-
+"""
 @a.app.route("/history", methods=['GET'])
 def history():
     # ############################
@@ -264,7 +267,7 @@ def ajaxhistory():
             else:
                 return json.dumps({'date': "", 'email': "", 'burnout': "", 'calories': ""}), 200, {
                     'ContentType': 'application/json'}
-
+"""
 
 @a.app.route("/friends", methods=['GET'])
 def friends():
