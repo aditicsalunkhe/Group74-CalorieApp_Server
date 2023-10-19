@@ -60,20 +60,33 @@
 </head>
 
 <body>
+
+
     <h1>Enrolled Workouts</h1>
+
+    <!-- Check if there are no enrolled workouts -->
+    {% if not data %}
+    <div class="card">
+        <p class="no-workouts">Ohhh noo! You have not enrolled in any workouts!!</p>
+        <a class="btn btn-primary" href="/dashboard">Enroll Now</a>
+    </div>
+    {% else %}
     <div class="card-container">
         {% for item in data %}
+        <!-- Your existing workout cards here -->
         <div class="card">
             <div class="status">{{ item.Status }}</div>
             <form action="/remove_status" method="post">
                 <input type="hidden" name="status_id" value="{{ item._id }}">
                 <input type="hidden" name="status" value="{{ item.Status }}">
                 <input type="hidden" name="email" value="{{ item.Email }}">
-                <button class="card-button" type="submit">Remove</button>
+                <button class="btn btn-primary" type="submit">Remove</button>
             </form>
         </div>
         {% endfor %}
     </div>
-</body>
+    {% endif %}
 
-{% endblock content %}
+
+
+    {% endblock content %}
