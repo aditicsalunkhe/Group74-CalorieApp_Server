@@ -16,35 +16,35 @@ https://drive.google.com/drive/folders/1M5vdCwH11C-MqK8X-Dkf5bPR0SaWA5Yc?usp=sha
 ![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/syntax_checker.yml/badge.svg)
 [![codecov](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server/branch/main/graph/badge.svg?token=IQW5PLLE22)](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server)
 <!--Badges-->
-<a href="https://github.com/deekay2310/calorieApp_server/fork" target="blank">
-<img src="https://img.shields.io/github/forks/deekay2310/calorieApp_server?style=flat-square" alt="calorieApp_server forks"/>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/fork" target="blank">
+<img src="https://img.shields.io/github/forks/aditicsalunkhe/Group74-CalorieApp_Server?style=flat-square" alt="CalorieApp_Server forks"/>
 </a>
-<a href="https://github.com/deekay2310/calorieApp_server/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/deekay2310/calorieApp_server?style=flat-square" alt="calorieApp_server stars"/>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/aditicsalunkhe/Group74-CalorieApp_Server?style=flat-square" alt="CalorieApp_Server stars"/>
 </a>
-<a href="https://github.com/deekay2310/calorieApp_server/issues" target="blank">
-<img src="https://img.shields.io/github/issues/deekay2310/calorieApp_server?style=flat-square" alt="calorieApp_server issues"/>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues" target="blank">
+<img src="https://img.shields.io/github/issues/aditicsalunkhe/Group74-CalorieApp_Server?style=flat-square" alt="CalorieApp_Server issues"/>
 </a>
-<a href="https://github.com/deekay2310/calorieApp_server/issues" target="blank">
-<img src="https://img.shields.io/github/issues-closed/deekay2310/calorieApp_server" alt="calorieApp_server issues closed"/>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues" target="blank">
+<img src="https://img.shields.io/github/issues-closed/aditicsalunkhe/Group74-CalorieApp_Server" alt="CalorieApp_Server issues closed"/>
 </a>
-<a href="https://github.com/deekay2310/calorieApp_server/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/deekay2310/calorieApp_server?style=flat-square" alt="cheapBuy pull-requests"/>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/aditicsalunkhe/Group74-CalorieApp_Server?style=flat-square" alt="CalorieApp_Server pull-requests"/>
 </a>
-<a href="https://github.com/deekay2310/calorieApp_server/graphs/contributors" alt="Contributors">
-<img src="https://img.shields.io/github/contributors/deekay2310/calorieApp_server" /></a>
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/contributors" alt="Contributors">
+<img src="https://img.shields.io/github/contributors/aditicsalunkhe/Group74-CalorieApp_Server" /></a>
 
-<a href="https://github.com/deekay2310/calorieApp_server/milestones" alt="milestones">
-<img src="https://img.shields.io/github/milestones/all/deekay2310/calorieApp_server" /></a> 
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/milestones" alt="milestones">
+<img src="https://img.shields.io/github/milestones/all/aditicsalunkhe/Group74-CalorieApp_Server" /></a> 
 
-<a href="https://github.com/deekay2310/calorieApp_server/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/deekay2310/calorieApp_server" /></a> 
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/commit-activity" alt="commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/aditicsalunkhe/Group74-CalorieApp_Server" /></a> 
 
-<a href="https://github.com/deekay2310/calorieApp_server/discussions" alt="discussion">
-<img src="https://img.shields.io/github/discussions/deekay2310/calorieApp_server" /></a> 
+<a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/discussions" alt="discussion">
+<img src="https://img.shields.io/github/discussions/aditicsalunkhe/Group74-CalorieApp_Server" /></a> 
 
-<a href="https://img.shields.io/github/repo-size/deekay2310/calorieApp_server" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/deekay2310/calorieApp_server" /></a>
+<a href="https://img.shields.io/github/repo-size/aditicsalunkhe/Group74-CalorieApp_Server" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/aditicsalunkhe/Group74-CalorieApp_Server" /></a>
 
 
 
