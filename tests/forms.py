@@ -35,7 +35,6 @@ class LoginForm(FlaskForm):
     remember = BooleanField('Remember Me')
     submit = SubmitField('Login')
 
-    """
 
 class CalorieForm(FlaskForm):
     app = App()
@@ -51,16 +50,14 @@ class CalorieForm(FlaskForm):
     for i in get_docs:
         temp = i['food'] + ' (' + i['calories'] + ')'
         result.append((temp, temp))
-
+    date = DateField('Date', validators=[DataRequired()])
     food = SelectField(
-        'Select Food', choices=result)
+        'Calories Consumed - Select Food', choices=result)
 
-    burnout = StringField('Burn Out', validators=[DataRequired()])
+    burnout = StringField('Calories Burnt', validators=[DataRequired()])
     submit = SubmitField('Save')
 
-"""
-    
-    
+
 class UserProfileForm(FlaskForm):
     weight = StringField(
         'Weight', validators=[
@@ -80,7 +77,7 @@ class UserProfileForm(FlaskForm):
                 min=2, max=20)])
     submit = SubmitField('Save Profile')
 
-"""
+
 class HistoryForm(FlaskForm):
     app = App()
     mongo = app.mongo
@@ -92,11 +89,18 @@ class EnrollForm(FlaskForm):
     app = App()
     mongo = app.mongo
     submit = SubmitField('Enroll')
-"""
 
 class ResetPasswordForm(FlaskForm):
-    password = PasswordField('Password', validators=[DataRequired()])
+    new_password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField(
         'Confirm Password', validators=[
-            DataRequired(), EqualTo('password')])
+            DataRequired(), EqualTo('new_password')])
     submit = SubmitField('Reset')
+
+class ForgotForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+
+
+
+
