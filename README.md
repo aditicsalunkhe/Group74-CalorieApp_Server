@@ -196,11 +196,10 @@ Link to the implementation video of the BurnOut application:
 <center>
   <table>
     <tr>
-        <td align="center"><a href="https://github.com/deekay2310"><img src="https://avatars.githubusercontent.com/u/29257773?v=4" width="100px;" alt=""/><br /><sub><b>Dev Kumar</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/PrakruthiSomashekar"><img src="https://avatars.githubusercontent.com/u/62984587?v=4" width="100px;" alt=""/><br /><sub><b>Prakruthi Somashekar</b></sub></a></td>
-    <td align="center"><a href="https://github.com/radhikaraman20"><img src="https://avatars.githubusercontent.com/u/89432698?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Radhika Raman</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/RohanSinha96"><img src="https://avatars.githubusercontent.com/u/15325746?v=4" width="100px;" alt=""/><br /><sub><b>Rohan Sinha</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/SunidhiHegde"><img src="https://avatars.githubusercontent.com/u/62884191?v=4" width="100px;" alt=""/><br /><sub><b>Sunidhi Hegde</b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/deekay2310"><img src="https://avatars.githubusercontent.com/u/29257773?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Salunkhe</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/PrakruthiSomashekar"><img src="https://avatars.githubusercontent.com/u/62984587?v=4" width="100px;" alt=""/><br /><sub><b>Purv Patel</b></sub></a></td>
+    <td align="center"><a href="https://github.com/radhikaraman20"><img src="https://avatars.githubusercontent.com/u/89432698?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Ishan Mistry</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/RohanSinha96"><img src="https://avatars.githubusercontent.com/u/15325746?v=4" width="100px;" alt=""/><br /><sub><b>Lixing </b></sub></a><br /></td>
     </tr>
   </table>
 </center>
@@ -210,9 +209,9 @@ Link to the implementation video of the BurnOut application:
   Please refer the [CONTRIBUTING.md](https://github.com/deekay2310/calorieApp_server/blob/main/CONTRIBUTING.md) file for instructions on how to contribute to our repository.
 
   <p align="center">
-    <a href="https://github.com/deekay2310/calorieApp_server/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues/new/choose">Report Bug</a>
     /
-    <a href="https://github.com/deekay2310/calorieApp_server/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues/new/choose">Request Feature</a>
   </p>
 
   # License
