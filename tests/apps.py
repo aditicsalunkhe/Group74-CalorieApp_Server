@@ -13,6 +13,6 @@ class App:
         self.app.config['MAIL_SERVER'] = 'smtp.gmail.com'
         self.app.config['MAIL_PORT'] = 465
         self.app.config['MAIL_USE_SSL'] = True
-        self.app.config['MAIL_USERNAME'] = "bogusdummy123@gmail.com"
-        self.app.config['MAIL_PASSWORD'] = "helloworld123!"
+        self.app.config['MAIL_USERNAME'] = "burnoutapp74@gmail.com"
+        self.app.config['MAIL_PASSWORD'] = "fhjt vqpq slqr wdtr"
         self.mail = Mail(self.app)

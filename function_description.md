@@ -31,3 +31,14 @@ friends()
 
 yoga()/swim()/abbs()/belly()/core()/gym()/walk()/dance()/hrx()
 - This function allows user to enroll in different plans
+
+remove_status()
+- This function allows the user to un-enroll from the list of plans they enrolled in earlier
+
+my_enrolled_workouts()
+- This function is used to fetch the list of workouts the user is currently enrolled in
+
+get_burnbot()
+- This function is used to get the respons of the burnbot based on the user query.
+
+

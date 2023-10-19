@@ -13,17 +13,6 @@ from flask_mail import Mail, Message
 from flask_pymongo import PyMongo
 from tabulate import tabulate
 from forms import HistoryForm, RegistrationForm, LoginForm, CalorieForm, UserProfileForm, EnrollForm, ForgotForm, ResetPasswordForm
-# app = Flask(__name__)
-# app.secret_key = 'secret'
-# app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/test'
-# app.config['MONGO_CONNECT'] = False
-
-# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-# app.config['MAIL_PORT'] = 465
-# app.config['MAIL_USE_SSL'] = True
-# app.config['MAIL_USERNAME'] = "burnoutapp74@gmail.com"
-# app.config['MAIL_PASSWORD'] = "fhjt vqpq slqr wdtr"
-# mail = Mail(app)
 
 a = apps.App()
 mongo = a.mongo
