@@ -169,6 +169,19 @@ def my_enrolled_workouts():
     return render_template('enrolled_workouts.html', data=workout_data)
 
 
+@a.app.route('/remove_status', methods=['POST'])
+def remove_status():
+
+    # start from here
+    status_id = session.form.get('_id')  # Get the status identifier from the form
+    print(status_id)
+    try:
+        mongo.db.enrolled_workout.delete_one({'_id': status_id})  # Delete the status from the MongoDB collection
+    except Exception as e:
+        pass
+    return redirect(url_for('my_enrolled_workouts'))  # Redirect back to the data display page
+
+
 @a.app.route("/profile", methods=['GET', 'POST'])
 def profile():
     return render_template('display_profile.html')
