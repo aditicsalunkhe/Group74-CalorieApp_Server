@@ -13,7 +13,7 @@ class Utilities:
     def send_email(self, email):
         msg = Message()
         msg.subject = "BURNOUT - Reset Password Request"
-        msg.sender = 'bogusdummy123@gmail.com'
+        msg.sender = 'burnoutapp74@gmail.com'
         msg.recipients = [email]
         random = str(self.get_random_string(8))
         msg.body = 'Please use the following password to login to your account: ' + random
