@@ -1,6 +1,6 @@
 # Added Features in the Burnout v3.0 (What's new?)
 
-### <https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues?q=is%3Aissue+is%3Aclosed> Bug fixes and small enhancements.
+### Bug fixes and small enhancements.<https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues?q=is%3Aissue+is%3Aclosed>
 
 ### <li> Enhanced chatbot to learn from our own data and chat like human using Llama2 model, Pincone vector database and Langchain Framework.
 
@@ -12,5 +12,5 @@
 
 ### <https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues/39> Added enroll buttons on the dashboard for fast enroll of workout.
 
-### <https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues?q=is%3Aissue+is%3Aclosed> Changed small UI by changing fonts, add logo, add background image, refine context and layout.
+### <https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/pull/51> Changed small UI by changing fonts, add logo, add background image, refine context and layout.
 
