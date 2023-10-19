@@ -446,7 +446,7 @@ def dashboard():
     # ##########################
     return render_template('dashboard.html', title='Dashboard')
 
-
+"""
 @a.app.route("/yoga", methods=['GET', 'POST'])
 def yoga():
     # ############################
@@ -712,7 +712,7 @@ def hrx():
     else:
         return redirect(url_for('dashboard'))
     return render_template('hrx.html', title='HRX', form=form)
-
+"""
 
 @a.app.route("/forgot", methods=['GET', 'POST'])
 def forgot():
