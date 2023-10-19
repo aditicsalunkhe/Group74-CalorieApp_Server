@@ -20,34 +20,51 @@
 <body>
     <header class="site-header">
       <nav class="navbar navbar-expand-md fixed-top nav-color">
-        <div class="container">
-         {% if not session.get("email") %}
-            <a class="navbar-brand mr-4 text-white" href="{{url_for('login')}}">BURNOUT</a>
-          {% else %}
-            <a class="navbar-brand mr-4 text-white" href="{{url_for('dashboard')}}">BURNOUT</a>
-          {% endif %}
-
-          <div class="collapse navbar-collapse" id="navbarToggle">
+<!--        <div class="container">-->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
             <!-- Navbar Right Side -->
             {% if not session.get("email"): %}
-            <div class="navbar-nav ml-auto">
+            <div class="navbar-nav">
               <a class="nav-item nav-link" href="{{ url_for('login') }}" id="login">Login</a>
               <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
             </div>
             {% else %}
-            <div class="navbar-nav mr-4">
-              <a class="nav-item nav-link" href="{{ url_for('calories') }}">Enter Calories</a>
-              <a class="nav-item nav-link" href="{{ url_for('history') }}">History</a>
+            <ul class="navbar-nav d-lg-flex align-items-center">
+                <li class = "nav-item">
+              <a class="nav-link" href="{{ url_for('calories') }}">Enter Calories</a>
+                </li>
+                <li class = "nav-item">
+              <a class="nav-link" href="{{ url_for('history') }}">History</a>
+                    </li>
+         {% if not session.get("email") %}
+                <li class = "nav-item">
+            <!--<a class="navbar-brand mr-4 text-white" href="{{url_for('login')}}">BURNOUT</a>-->
+            <a class="navbar-brand" href="{{url_for('login')}}">
+                <img src="../static/img/logo1.png">
+            </a>
+                </li>>
+          {% else %}
+            <!--<a class="navbar-brand mr-4 text-white" href="{{url_for('dashboard')}}">BURNOUT</a>-->
+                <li class = "nav-item">
+            <a class="navbar-brand" href="{{url_for('dashboard')}}">
+                <img src="../static/img/logo1.png">
+            </a>
+                </li>
+          {% endif %}
+                 <li class = "nav-item">
               <a class="nav-item nav-link" href="{{url_for('friends')}}">Friends</a>
-              <a class="nav-item nav-link btn btn-link" href="{{ url_for('user_profile') }}">Profile</button>
-            </div>
-            </div>
+                 </li>
+                <li class = "nav-item">
+              <a class="nav-item nav-link btn btn-link" href="{{ url_for('user_profile') }}">Profile</a>
+                </li>
+            </ul>
+              </div>
             <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link">Welcome, {{ session.get("username") }}</a>
+              <a class="top-right nav-item nav-link">Welcome, {{ session.get("username") }}</a>
               <button class="nav-item nav-link btn btn-link" onclick="logout()">Log Out</button>
             </div>
             {% endif %}
-          </div>
+<!--          </div>-->
         </div>
       </nav>
     </header>

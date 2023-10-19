@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,700&display=swap');
+
 .nav-color{
-    background: #d8b26e;
-    font-family: Verdana, sans-serif;
-    color: #bde2bd;
+    /* background: #d8b26e; */
+    background: #ffffff;
+    font-family: "Alegreya", sans-serif;
   }
 
   body {
-      background: #fafafa;
+      /* background: #fafafa; */
+      background: #ed9f91;
       color: #333333;
       margin-top: 5rem;
       min-height: 100vh;
@@ -27,11 +30,14 @@
   }
     
     .site-header .navbar-nav .nav-link {
-      color: #cbd5db;
+      color: #525454;
+      font-color: #000000;
+    font-weight: bold;
+    font-size: x-large;
     }
     
     .site-header .navbar-nav .nav-link:hover {
-      color: #ffffff;
+      color: #000000;
     }
     
     .site-header .navbar-nav .nav-link.active {
@@ -148,3 +154,23 @@
         height: 35vh;
         object-fit: contain;
     }
+
+    .navbar-brand img {
+        height: 80px;
+        padding: 0px;
+    }
+
+   .navbar-brand{
+    display: block;
+    justify-content: center;
+}
+
+   .top-right{
+    font-size: small;
+   }
+
+
+
+
+
+
