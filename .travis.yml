@@ -1,3 +1,6 @@
+before_install:
+  - sudo apt-get update
+
 language: python
 env:
   - CODECOV_TOKEN='ed8ebcac-7dfe-4635-9044-8e21902aeeaa'
