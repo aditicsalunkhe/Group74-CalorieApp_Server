@@ -12,7 +12,7 @@ from flask import render_template, session, url_for, flash, redirect, request, F
 from flask_mail import Mail, Message
 from flask_pymongo import PyMongo
 from tabulate import tabulate
-from forms import HistoryForm, RegistrationForm, LoginForm, CalorieForm, UserProfileForm, EnrollForm, ForgotForm, ResetPasswordForm
+from forms import RegistrationForm, LoginForm, UserProfileForm, ForgotForm, ResetPasswordForm
 
 a = apps.App()
 mongo = a.mongo
@@ -113,7 +113,7 @@ def calories():
     # Input: Email, date, food, burnout
     # Output: Value update in database and redirected to home page
     # ############################
-    
+
     now = datetime.now()
     now = now.strftime('%Y-%m-%d')
     get_session = session.get('email')
