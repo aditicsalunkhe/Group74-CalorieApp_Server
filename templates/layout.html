@@ -53,12 +53,17 @@
           {% endif %}
                  <li class = "nav-item">
               <a class="nav-item nav-link" href="{{url_for('friends')}}">Friends</a>
-                 </li>
-                <li class = "nav-item">
-              <a class="nav-item nav-link btn btn-link" href="{{ url_for('user_profile') }}">Profile</a>
-                </li>
-            </ul>
+              <div class="nav-item dropdown position-relative">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Me
+                </a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="{{ url_for('profile') }}">My Profile</a>
+                    <a class="dropdown-item" href="{{ url_for('my_enrolled_workouts') }}">My Enrolled Workouts</a>
+                </div>
               </div>
+            </div>
+            </div>
             <div class="navbar-nav ml-auto">
               <a class="top-right nav-item nav-link">Welcome, {{ session.get("username") }}</a>
               <button class="nav-item nav-link btn btn-link" onclick="logout()">Log Out</button>
@@ -105,11 +110,19 @@
                     </div>
                     {% else %}
                     <div class="col-lg-6 col-md-6">
-                        <ul class="list-unstyled">
-                        <li><a class="nav-item nav-link text-muted" href="{{ url_for('calories') }}">Enter Calories</a></li>
-                        <li><a class="nav-item nav-link text-muted" href="{{ url_for('history') }}">History</a></li>
-                        <li><a class="nav-item nav-link text-muted" href="{{url_for('friends')}}">Friends</a></li>
-                        <li><a class="nav-item nav-link text-muted" href="{{ url_for('user_profile') }}">Profile</a></li>
+                        <ul class="list-unstyled text-muted">
+                        <li><a class="nav-item nav-link" href="{{ url_for('calories') }}">Enter Calories</a></li>
+                        <li><a class="nav-item nav-link" href="{{ url_for('history') }}">History</a></li>
+                        <li><a class="nav-item nav-link" href="{{url_for('friends')}}">Friends</a></li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="ProfileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              About Me
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="ProfileDropdown">
+                              <a class="dropdown-item" href="{{ url_for('profile') }}">My Profile</a>
+                              <a class="dropdown-item" href="{{ url_for('my_enrolled_workouts') }}">My Enrolled Workouts</a>
+                          </div>
+                        </li>
                         </ul>
                     </div>
                     </div>

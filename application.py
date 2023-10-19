@@ -137,8 +137,7 @@ def calories():
                     food = request.form.get('food')
 
                     cals = food.split(" ")
-                    cals = int(cals[-1][1:(len(cals[1]) - 1)])
-                    print(cals)
+                    cals = int(cals[-1][1:(len(cals[-1]) - 1)])
                     burn = request.form.get('burnout')
 
                     temp = mongo.db.calories.find_one({'email': email, 'date': selected_date}, {
@@ -157,13 +156,53 @@ def calories():
         return redirect(url_for('home'))
     return render_template('calories.html', form=form, time=now)
 
+@a.app.route("/my_enrolled_workouts", methods=['GET', 'POST'])
+def my_enrolled_workouts():
+    email = session.get('email')
+    try:
+        workout_data = list(mongo.db.enrolled_workout.find({"Email" : email}, {"_id",'Email','Status'}))
+        if workout_data is None:
+            raise Exception("No data found for the given email")
+        workout_data = list(workout_data)
+    except Exception as e:
+        return render_template('error.html', error_message=str(e))
+    return render_template('enrolled_workouts.html', data=workout_data)
 
-@a.app.route("/user_profile", methods=['GET', 'POST'])
-def user_profile():
+
+@a.app.route('/remove_status', methods=['POST'])
+def remove_status():
+
+    # start from here
+    status_id = session.form.get('_id')  # Get the status identifier from the form
+    print(status_id)
+    try:
+        mongo.db.enrolled_workout.delete_one({'_id': status_id})  # Delete the status from the MongoDB collection
+    except Exception as e:
+        pass
+    return redirect(url_for('my_enrolled_workouts'))  # Redirect back to the data display page
+
+
+@a.app.route("/profile", methods=['GET', 'POST'])
+def profile():
+    email = session.get('email')
+
+    if email is not None:
+        myProfile = mongo.db.profile.find_one({'email': email}, {'email', 'height', 'weight', 'target_weight', 'goal'})
+        weight = myProfile['weight']
+        height = myProfile['height']
+        target_weight = myProfile['target_weight']
+        goal = myProfile['goal']
+        return render_template('display_profile.html', weight=weight, height=height, goal=goal, target_weight=target_weight)
+
+    return redirect(url_for('login'))
+
+
+@a.app.route("/edit_profile", methods=['GET', 'POST'])
+def edit_profile():
     """
-    user_profile() function displays the UserProfileForm (user_profile.html) template
-    route "/user_profile" will redirect to user_profile() function.
-    user_profile() called and if the form is submitted then various values are fetched and updated into the database entries
+    edit_profile() function displays the UserProfileForm (user_profile.html) template
+    route "/edit_profile" will redirect to edit_profile() function.
+    edit_profile() called and if the form is submitted then various values are fetched and updated into the database entries
     Input: Email, height, weight, goal, Target weight
     Output: Value update in database and redirected to home login page
     """
@@ -176,23 +215,22 @@ def user_profile():
                 height = request.form.get('height')
                 goal = request.form.get('goal')
                 target_weight = request.form.get('target_weight')
-                temp = mongo.db.profile.find_one({'email': email}, {
-                    'height', 'weight', 'goal', 'target_weight'})
+                temp = mongo.db.profile.find_one({'email': email}, {'email', 'weight', 'height', 'target_weight', 'goal'})
                 if temp is not None:
-                    mongo.db.profile.update({'email': email},
-                                            {'$set': {'weight': temp['weight'],
-                                                      'height': temp['height'],
-                                                      'goal': temp['goal'],
-                                                      'target_weight': temp['target_weight']}})
+                    mongo.db.profile.update_one({'email': email},
+                                            {'$set': {'weight': weight,
+                                                      'height': height,
+                                                      'goal': goal,
+                                                      'target_weight': target_weight}})
+                    print(mongo.db.profile.find_one({'email': email}, {'email', 'weight', 'height', 'target_weight', 'goal'}))
                 else:
-                    mongo.db.profile.insert({'email': email,
+                    mongo.db.profile.insert_one({'email': email,
                                              'height': height,
                                              'weight': weight,
                                              'goal': goal,
                                              'target_weight': target_weight})
-
-            flash(f'User Profile Updated', 'success')
-            return render_template('display_profile.html', status=True, form=form)
+                flash(f'User Profile Updated', 'success')
+            return render_template('display_profile.html', status=True, form=form, height=height, weight=weight, target_weight=target_weight)
     else:
         return redirect(url_for('login'))
     return render_template('user_profile.html', status=True, form=form)
@@ -210,6 +248,8 @@ def history():
     email = get_session = session.get('email')
     if get_session is not None:
         form = HistoryForm()
+    else:
+        return redirect(url_for('login'))
     return render_template('history.html', form=form)
 
 
@@ -249,29 +289,32 @@ def friends():
     # ##########################
     email = session.get('email')
 
-    myFriends = list(mongo.db.friends.find(
-        {'sender': email, 'accept': True}, {'sender', 'receiver', 'accept'}))
-    myFriendsList = list()
+    if email is not None:
+        myFriends = list(mongo.db.friends.find(
+            {'sender': email, 'accept': True}, {'sender', 'receiver', 'accept'}))
+        myFriendsList = list()
 
-    for f in myFriends:
-        myFriendsList.append(f['receiver'])
+        for f in myFriends:
+            myFriendsList.append(f['receiver'])
 
-    print(myFriends)
-    allUsers = list(mongo.db.user.find({}, {'name', 'email'}))
+        print(myFriends)
+        allUsers = list(mongo.db.user.find({}, {'name', 'email'}))
 
-    pendingRequests = list(mongo.db.friends.find(
-        {'sender': email, 'accept': False}, {'sender', 'receiver', 'accept'}))
-    pendingReceivers = list()
-    for p in pendingRequests:
-        pendingReceivers.append(p['receiver'])
+        pendingRequests = list(mongo.db.friends.find(
+            {'sender': email, 'accept': False}, {'sender', 'receiver', 'accept'}))
+        pendingReceivers = list()
+        for p in pendingRequests:
+            pendingReceivers.append(p['receiver'])
 
-    pendingApproves = list()
-    pendingApprovals = list(mongo.db.friends.find(
-        {'receiver': email, 'accept': False}, {'sender', 'receiver', 'accept'}))
-    for p in pendingApprovals:
-        pendingApproves.append(p['sender'])
+        pendingApproves = list()
+        pendingApprovals = list(mongo.db.friends.find(
+            {'receiver': email, 'accept': False}, {'sender', 'receiver', 'accept'}))
+        for p in pendingApprovals:
+            pendingApproves.append(p['sender'])
 
-    print(pendingApproves)
+        print(pendingApproves)
+    else:
+        return redirect(url_for('login'))
 
     # print(pendingRequests)
     return render_template('friends.html', allUsers=allUsers, pendingRequests=pendingRequests, active=email,
@@ -297,8 +340,8 @@ def send_email():
     friend_email = str(friend_email).split(',')
     server = smtplib.SMTP_SSL("smtp.gmail.com",465)
     #Storing sender's email address and password
-    sender_email = "calorie.app.server@gmail.com"
-    sender_password = "Temp@1234"
+    sender_email = "burnoutapp74@gmail.com"
+    sender_password = "fhjt vqpq slqr wdtr"
     
     #Logging in with sender details
     server.login(sender_email,sender_password)
@@ -743,29 +786,6 @@ def reset_password(token):
         return redirect(url_for('login'))  # Redirect to the login page
     
     return render_template('reset_password.html', form=form, token=token, error=error)
-
-# @a.app.route("/ajaxdashboard", methods=['POST'])
-# def ajaxdashboard():
-#     # ############################
-#     # login() function displays the Login form (login.html) template
-#     # route "/login" will redirect to login() function.
-#     # LoginForm() called and if the form is submitted then various values are fetched and verified from the database entries
-#     # Input: Email, Password, Login Type
-#     # Output: Account Authentication and redirecting to Dashboard
-#     # ##########################
-#     email = get_session = session.get('email')
-#     print(email)
-#     if get_session is not None:
-#         if request.method == "POST":
-#             result = mongo.db.user.find_one(
-#                 {'email': email}, {'email', 'Status'})
-#             if result:
-#                 return json.dumps({'email': result['email'], 'Status': result['result']}), 200, {
-#                     'ContentType': 'application/json'}
-#             else:
-#                 return json.dumps({'email': "", 'Status': ""}), 200, {
-#                     'ContentType': 'application/json'}
-
 
 if __name__ == '__main__':
     a.app.run(debug=True)

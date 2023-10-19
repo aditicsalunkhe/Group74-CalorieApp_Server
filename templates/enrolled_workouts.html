@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<head>
+    <title>Enrolled Workouts</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .status {
+            flex: 1;
+            /* Allow the status to take up available space and left-align */
+            font-size: 24px;
+            /* Adjust font size for the status */
+            text-transform: capitalize;
+            margin-bottom: 30px;
+        }
+
+        .card-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-button {
+            padding: 10px 20px;
+            /* Increase padding for spacing between the buttons */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .info-button {
+            margin-left: 10px;
+            /* Adjust margin for the Info button */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Enrolled Workouts</h1>
+    <div class="card-container">
+        {% for item in data %}
+        <div class="card">
+            <div class="status">{{ item.Status }}</div>
+            <button class="btn btn-outline-info" type="submit">Remove</button>
+            <form action="/remove_status" method="post">
+                <input type="hidden" name="status_id" value="{{ item._id }}">
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+{% endblock content %}
