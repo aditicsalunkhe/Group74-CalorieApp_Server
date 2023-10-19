@@ -14,7 +14,7 @@ https://drive.google.com/drive/folders/1M5vdCwH11C-MqK8X-Dkf5bPR0SaWA5Yc?usp=sha
 ![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/unit_test.yml/badge.svg)
 ![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/style_checker.yml/badge.svg)
 ![github workflow](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/actions/workflows/syntax_checker.yml/badge.svg)
-[![codecov](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server/branch/main/graph/badge.svg?token=IQW5PLLE22)](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server)
+[![codecov](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server/graph/badge.svg?token=2EN3OP2IU5)](https://codecov.io/gh/aditicsalunkhe/Group74-CalorieApp_Server)
 <!--Badges-->
 <a href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/fork" target="blank">
 <img src="https://img.shields.io/github/forks/aditicsalunkhe/Group74-CalorieApp_Server?style=flat-square" alt="CalorieApp_Server forks"/>
