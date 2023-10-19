@@ -49,11 +49,11 @@ Our link/embed - how - https://github.com/angelmejiabrito/googledrivevideotowebp
 
 
 
-# BurnOut
+# BurnOut 4.0
 
 ![WhatsApp Image 2021-09-28 at 2 48 00 PM](https://user-images.githubusercontent.com/25662536/135546154-cfae1d2e-439a-4edc-b0bb-57f693ef5a83.jpeg)
 
-BurnOut is an easy to use application that keeps track of a user's daily calories gained and burnt. It can help the user to set goals such as weight loss/gain. Users can edit their profile by entering their height, weight, goal and target-weight. Users can enroll into numerous programs involving fitness such as yoga classes and workout sessions. Users can now connect with their friends by sending a friend-request and share their progress. This document provides a major perspective for the users to understand and take up the project as an Open source software and add on multiple features before releasing to the market. Also, the document aids the developers in understanding the code and acts as a reference point for continuing the project. 
+BurnOut 4.0 is an easy to use application that keeps track of a user's daily calories gained and burnt. It can help the user to set goals such as weight loss/gain. Users can edit their profile by entering their height, weight, goal and target-weight. Users can enroll into numerous programs involving fitness such as yoga classes and workout sessions. Users can now connect with their friends by sending a friend-request and share their progress. This document provides a major perspective for the users to understand and take up the project as an Open source software and add on multiple features before releasing to the market. Also, the document aids the developers in understanding the code and acts as a reference point for continuing the project. 
 
 # Table of Contents  
 
@@ -76,7 +76,7 @@ BurnOut is an easy to use application that keeps track of a user's daily calorie
 - [License](#license)
 
 
-# Why use BurnOut?
+# Why use BurnOut 4.0?
  - User can keep track of their calorie intake.
  - User just needs to input the food they've had, calories get calculated automatically.
  - Displays a record of calories in and calories burnt out day-wise in the `History` tab.
