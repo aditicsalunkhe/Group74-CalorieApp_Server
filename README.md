@@ -164,25 +164,35 @@ Link to the implementation video of the BurnOut application:
   
     https://github.com/deekay2310/calorieApp_server.git
   
- Step 3:
+  Step 3:
    Install the required packages by running the following command in the terminal 
    
     pip install -r requirements.txt
+
+  Step 4: 
+    Run the following command in the terminal
+
+    python insert_food_data.py
+
+  Step 5:
+    Create an app password for your gmail account (or you can create a new gmail account).
+    For instructions on creating app password, follow <a href="https://support.google.com/accounts/answer/185833?hl=en">this link</a>
+
+  Step 6: 
+    Copy and add this app password and associated email address to apps.py.
     
- Step 4:
+  Step 7:
     Run the following command in the terminal
     
     python application.py
     
- Step 5:
+  Step 8:
     Open the URL in your browser:  
       http://127.0.0.1:5000/
       
+  ## Setup Chatbot
       
-  # Source Code
   
-  Link to the repository:
-  https://github.com/aditicsalunkhe/Group74-CalorieApp_Server
   
   # Enhancements
 
