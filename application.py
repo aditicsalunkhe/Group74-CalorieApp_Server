@@ -172,13 +172,12 @@ def my_enrolled_workouts():
 @a.app.route('/remove_status', methods=['POST'])
 def remove_status():
 
-    # start from here
-    status_id = session.form.get('_id')  # Get the status identifier from the form
-    print(status_id)
-    try:
-        mongo.db.enrolled_workout.delete_one({'_id': status_id})  # Delete the status from the MongoDB collection
-    except Exception as e:
-        pass
+    #Extract values from the form in the html
+    status_id = request.form.get('status_id')
+    email = request.form.get('email')
+    status = request.form.get('status')
+   
+    mongo.db.enrolled_workout.delete_one({'Email': email, 'Status': status})
     return redirect(url_for('my_enrolled_workouts'))  # Redirect back to the data display page
 
 
