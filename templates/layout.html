@@ -21,22 +21,23 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md fixed-top nav-color">
 <!--        <div class="container">-->
-          <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
+          <div class="collapse navbar-collapse " id="navbarToggle">
             <!-- Navbar Right Side -->
             {% if not session.get("email"): %}
             <div class="navbar-nav">
-              <a class="nav-item nav-link" href="{{ url_for('login') }}" id="login">Login</a>
-              <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+            <a class="navbar-brand" href="{{url_for('login')}}">
+                <img src="../static/img/logo1.png"> </a>
+<!--              <a class="nav-item nav-link" href="{{ url_for('login') }}" id="login">Login</a>-->
+<!--              <a class="nav-item nav-link " href="{{ url_for('register') }}">Register</a>-->
+            </div>
+
+          <div class="navbar-nav ml-auto">
+              <a class="nav-item nav-link top-right" href="{{ url_for('login') }}" id="login">Login</a>
+              <a class="nav-item nav-link " href="{{ url_for('register') }}">Register</a>
             </div>
             {% else %}
             <ul class="navbar-nav d-lg-flex align-items-center">
-                <li class = "nav-item">
-              <a class="nav-link" href="{{ url_for('calories') }}">Enter Calories</a>
-                </li>
-                <li class = "nav-item">
-              <a class="nav-link" href="{{ url_for('history') }}">History</a>
-                    </li>
-         {% if not session.get("email") %}
+                         {% if not session.get("email") %}
                 <li class = "nav-item">
             <!--<a class="navbar-brand mr-4 text-white" href="{{url_for('login')}}">BURNOUT</a>-->
             <a class="navbar-brand" href="{{url_for('login')}}">
@@ -51,10 +52,18 @@
             </a>
                 </li>
           {% endif %}
+                <li class = "nav-item">
+              <a class="nav-link" href="{{ url_for('calories') }}">Enter Calories</a>
+                </li>
+                <li class = "nav-item">
+              <a class="nav-link" href="{{ url_for('history') }}">History</a>
+                    </li>
                  <li class = "nav-item">
               <a class="nav-item nav-link" href="{{url_for('friends')}}">Friends</a>
+                 </li>
+                <li class = "nav-item">
               <div class="nav-item dropdown position-relative">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Me
                 </a>
                 <div class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -62,7 +71,8 @@
                     <a class="dropdown-item" href="{{ url_for('my_enrolled_workouts') }}">My Enrolled Workouts</a>
                 </div>
               </div>
-            </div>
+                </li>
+            </ul>
             </div>
             <div class="navbar-nav ml-auto">
               <a class="top-right nav-item nav-link">Welcome, {{ session.get("username") }}</a>
@@ -90,71 +100,18 @@
       </div>
     </main>
 
-    <footer class="w-100 py-4 flex-shrink-0 nav-color fixed">
-        <div class="container py-4">
-            <div class="row gy-4 gx-5">
-                <div class="col-lg-6 col-md-6">
-                    <h5 class="h1 text-white">BURNOUT</h5>
-                    <p class="small text-white">Turning excuses into results.....</p>
-                    <p class="small text-white mb-0">&copy; Copyrights. All rights reserved. <!-- <a class="text-primary" href="#">Bootstrapious.com</a> --></p>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <!-- Navbar Right Side -->
-                    {% if not session.get("email"): %}
-                    <div class="navbar-nav ml-auto">
-                        <ul class="list-unstyled text-muted">
-                        <li><a class="nav-item nav-link" href="{{ url_for('login') }}" id="login">Login</a></li>
-                        <li><a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a></li>
-                        </ul>
-                    </div>
-                    {% else %}
-                    <div class="col-lg-6 col-md-6">
-                        <ul class="list-unstyled text-muted">
-                        <li><a class="nav-item nav-link" href="{{ url_for('calories') }}">Enter Calories</a></li>
-                        <li><a class="nav-item nav-link" href="{{ url_for('history') }}">History</a></li>
-                        <li><a class="nav-item nav-link" href="{{url_for('friends')}}">Friends</a></li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="ProfileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              About Me
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="ProfileDropdown">
-                              <a class="dropdown-item" href="{{ url_for('profile') }}">My Profile</a>
-                              <a class="dropdown-item" href="{{ url_for('my_enrolled_workouts') }}">My Enrolled Workouts</a>
-                          </div>
-                        </li>
-                        </ul>
-                    </div>
-                    </div>
-                    {% endif %}
-                    <!--<div >
-
-                        <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div> -->
-                <!-- <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Get started</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                </div> -->
+    <footer class="w-100 py-0 flex-shrink-0 nav-color fixed">
+        <div class="container py-1">
+            <div class="row gy-5 gx-5 text-center">
+                <img style="width: 30%; height: 30%" class="center-block" src="../static/img/logo1.png">
+                <p class="m-0 p-0 text-muted">&copy; NCSU CSC510 23Fall Group74 Copyrights. All rights reserved 2023.</p>
+            </div>
+            <hr class="m-1 p-0"/>
+            <div class="row gy-5 gx-5 justify-content-center">
+                <img style="width: 6%; height: 6%" class="col-md-4 image-container1" src="../static/img/githublogo.png">
+                 <a class="col-md-4 text-decoration-none text-muted" href="https://github.com/aditicsalunkhe/Group74-CalorieApp_Server">Visit Our Repo</a>
+                <img style="width: 6%; height: 6%" class="col-md-4 image-container2" src="../static/img/discordlogo.png">
+                 <a class="col-md-4 text-decoration-none text-muted" href="https://discord.com/channels/1146499984032813107/1152700445723197521">Join Our Channel</a>
             </div>
         </div>
     </footer>
