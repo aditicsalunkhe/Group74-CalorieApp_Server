@@ -1,5 +1,5 @@
 ## Self Assessment Rubrics
-| Notes                                               | Evidence                                                    | Score(X/Total) |
+| Notes                                               | Evidence                                                    | Score(72/90) |
 | --------------------------------------------------- | ----------------------------------------------------------- | ----- |
 | Video                                               | [Video]() | 3     |
 | Workload is spread over the whole team              | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/contributors)                                      | 3     |
