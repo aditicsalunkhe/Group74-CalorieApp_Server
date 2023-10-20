@@ -6,6 +6,9 @@ logout()
 - This function is used for logout by the user
 - logout() function just clears the session
 
+forgot()
+- This function enables the user to send a password rest link to their email.
+
 register()
 - This function is used for registering new users
 - Details of new users are stored in the database and the user is redirected to login page
@@ -40,5 +43,14 @@ my_enrolled_workouts()
 
 get_burnbot()
 - This function is used to get the respons of the burnbot based on the user query.
+
+edit_profile()
+- This function is used to change the user profile data such as height, weight and goal weight
+
+easy_enroll()
+- This function quickly enrolls a user in the given workout without having to go through all the details of the workout.
+
+core()
+- This function displays the belly.html template
 
 
