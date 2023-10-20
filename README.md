@@ -107,47 +107,39 @@ Link to the implementation video of the BurnOut application:
 
  ## Login
 
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/Screen%20Shot%202021-12-04%20at%206.30.27%20PM.png>
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc1.png>
 
  ## Forgot Password
-Screenshot
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc2.png>
 
- ## Set User Profile
+ ## Enroll in a Workout
  
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/Screen%20Shot%202021-12-04%20at%206.35.05%20PM.png>
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc5.png>
 
-## Enrolled Plans
+## Chatbot
+
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc7.png>
 
  ## Enter Calories in and burnt
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/calories.png>
-
- ## Chatbot
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/Screen%20Shot%202021-12-04%20at%206.31.54%20PM.png>
-
-
-
-
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc8.png>
 
  ## Check History
-
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/history.png>
-
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc9.png>
 
 
- ## Add weight alert
+ ## Friends Interaction
+
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc10.png>
+
+
+ ## Personal Profile
+
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc11.png>
+
+ ## Enrolled Workouts
  
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/Screen%20Shot%202021-12-04%20at%206.30.48%20PM.png>
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc12.png>
 
- ## Adding Friends
-
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/friends.png>
-
- ## Enrolling into several programs
- 
-<img src=https://github.com/deekay2310/calorieApp_server/blob/main/static/img/Screen%20Shot%202021-12-04%20at%206.32.08%20PM.png>
-
-## Friends
-Filled with requests and friends - all toggles open
 
  # Steps for execution
  
