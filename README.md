@@ -1,6 +1,6 @@
 # Link to demo/walkthrough video:
 
-Our link/embed - how - https://github.com/angelmejiabrito/googledrivevideotowebpage
+Link to the video - [Link](https://drive.google.com/file/d/1sk51oAx38qlPdrY_mUgI5oGwj5KtcTUc/view?usp=share_link) 
 <br>
 <br>
 
