@@ -103,7 +103,7 @@ Link to the implementation video of the BurnOut application:
  
  ## Register
  
-<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/tree/main/static/img/sc3.png>
+<img src=https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/sc3.png>
 
  ## Login
 
