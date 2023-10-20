@@ -238,10 +238,10 @@ Link to the implementation video of the BurnOut application:
 <center>
   <table>
     <tr>
-        <td align="center"><a href="https://github.com/aditisalunkhe"><img src="https://avatars.githubusercontent.com/u/29257773?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Salunkhe</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/purv2100"><img src="https://avatars.githubusercontent.com/u/62984587?v=4" width="100px;" alt=""/><br /><sub><b>Purv Patel</b></sub></a></td>
-    <td align="center"><a href="https://github.com/mistryishan25"><img src="https://avatars.githubusercontent.com/u/89432698?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Ishan Mistry</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/WangWangIsDog"><img src="https://avatars.githubusercontent.com/u/15325746?v=4" width="100px;" alt=""/><br /><sub><b>Lixing </b></sub></a><br /></td>
+        <td align="center"><a href="https://github.com/aditicsalunkhe"><img src="https://avatars.githubusercontent.com/u/111797405?v=4" width="100px;" alt=""/><br /><sub><b>Aditi Salunkhe</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/purv2100"><img src="https://avatars.githubusercontent.com/u/140658730?v=4" width="100px;" alt=""/><br /><sub><b>Purv Patel</b></sub></a></td>
+    <td align="center"><a href="https://github.com/mistryishan25"><img src="https://avatars.githubusercontent.com/u/52032248?s=400&u=7133c3eb3a6386a93c6a23ae2a43e1afcd30e993&v=4" width="100px;" alt=""/><br /><sub><b>Ishan Mistry</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/WangWangIsDog"><img src="https://avatars.githubusercontent.com/u/24827205?v=4" width="100px;" alt=""/><br /><sub><b>Lixing Zheng </b></sub></a><br /></td>
     </tr>
   </table>
 </center>
