@@ -6,7 +6,7 @@ Our link/embed - how - https://github.com/angelmejiabrito/googledrivevideotowebp
 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-[![DOI](https://www.zenodo.org/badge/419132821.svg)](https://www.zenodo.org/badge/latestdoi/419132821)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10020032.svg)](https://doi.org/10.5281/zenodo.10020032)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Build Status](https://app.travis-ci.com/aditicsalunkhe/Group74-CalorieApp_Server.svg?branch=main)](https://app.travis-ci.com/aditicsalunkhe/Group74-CalorieApp_Server)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
