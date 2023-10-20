@@ -1,4 +1,4 @@
-# Added Features in the Burnout v3.0 (What's new?)
+# Added Features in the Burnout v4.0 (What's new?)
 
 ### Bug fixes and small enhancements.<https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/issues?q=is%3Aissue+is%3Aclosed>
 
