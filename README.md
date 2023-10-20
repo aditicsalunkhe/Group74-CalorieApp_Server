@@ -77,7 +77,7 @@ BurnOut 4.0 is an easy to use application that keeps track of a user's daily cal
 
 
 # Why use BurnOut 4.0?
-  ![](proj2-showcase.gif)
+  ![Alt Text](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/static/img/proj2-showcase.gif)
  - User can keep track of their calorie intake.
  - User just needs to input the food they've had, calories get calculated automatically.
  - Displays a record of calories in and calories burnt out day-wise in the `History` tab.
