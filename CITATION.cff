@@ -1,0 +1,12 @@
+cff-version: 2.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Aditi Salunkhe"
+- family-names: "Purv Patel"
+- family-names: "Ishan Mistry"
+- family-names: "Lixing"
+title: "Group74-CalorieApp_Server"
+version: v2.0.0-alpha
+doi: 10.5281/zenodo.10020032
+date-released: 2023-10-19
+url: "https://github.com/aditicsalunkhe/Group74-CalorieApp_Server"
