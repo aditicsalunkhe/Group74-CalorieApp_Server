@@ -1,7 +1,7 @@
 ## Self Assessment Rubrics
 | Notes                                               | Evidence                                                    | Score(72/90) |
 | --------------------------------------------------- | ----------------------------------------------------------- | ----- |
-| Video                                               | [Video]() | 3     |
+| Video                                               | [Video](https://drive.google.com/file/d/1sk51oAx38qlPdrY_mUgI5oGwj5KtcTUc/view?usp=share_link) | 3     |
 | Workload is spread over the whole team              | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/contributors)                                      | 3     |
 | but nevertheless, here is a track record that everyone is contributing a lot) | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/contributors)                                              | 2     |
 | Number of commits                                   | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/graphs/commit-activity)                                                     | 2    |
