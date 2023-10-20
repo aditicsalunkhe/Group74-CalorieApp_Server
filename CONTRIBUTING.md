@@ -1,6 +1,6 @@
-# Contributing to BurnOut 3.0!!
+# Contributing to BurnOut 4.0!!
 <h3>Hello!👋</h3>
-<p>Firstly, thank you so much for showing interest in BurnOut 3.0 and contributing to our project.👍</p>
+<p> Firstly, thank you so much for showing interest in BurnOut 4.0 and contributing to our project.👍</p>
 The following are a set of guidelines for contributing to BurnOut. We are open to suggestions to enhance our project so feel free to propose changes to this document in a pull request.
 
 
@@ -36,10 +36,10 @@ Everyone participating in this project needs to abide by the aPAS - A Personal A
     Explain the problem and include additional details to help maintainers reproduce the problem:</p>
    <ul>
     <li><b>Use a clear and descriptive title</b> for the issue to identify the problem.</li>
-    <li><b>Describe the exact steps which reproduce the problem in as many details as possible.</li></b>
+    <li><b>Describe the exact steps that reproduce the problem in as many details as possible.</li></b>
     <li><b>Provide specific examples to demonstrate the steps.</b> Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those     examples. If you're providing snippets in the issue, use Markdown code blocks.</li>
     <li><b>If the problem is related to performance or memory, then ensure that you include a CPU profile capture with your report.</b></li>
-    <li><b>Include screenshots and animated GIFs which show you following the described steps and clearly demonstrate the problem.</li></b>
+    <li><b>Include screenshots and animated GIFs that show you following the described steps and clearly demonstrate the problem.</li></b>
     <li><b>If the problem wasn't triggered by a specific action</b>, describe what you were doing before the problem happened and share more information using the guidelines below.</li>
     </ul>
   
