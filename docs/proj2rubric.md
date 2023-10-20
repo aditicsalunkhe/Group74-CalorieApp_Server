@@ -23,8 +23,8 @@
 | Test cases exist                                    | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/tree/main/tests) | 2     |
 | Test cases are routinely executed                   | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server/blob/main/.travis.yml)           | 3     |
 | The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up | [Link](https://github.com/aditicsalunkhe/Group74-CalorieApp_Server#readme) | 3     |
-| Issues are discussed before they are closed         | [Discord screenshots](https://drive.google.com/drive/folders/1XQiQVsKqr5bvZBKOAaqz3m73iO6ArZoT?usp=share_link)  | 2     |
-| Chat channel: exists                               | [Discord screenshots](https://drive.google.com/drive/folders/1XQiQVsKqr5bvZBKOAaqz3m73iO6ArZoT?usp=share_link)                                          |  2     |
+| Issues are discussed before they are closed         | [Screenshots](https://drive.google.com/drive/folders/1XQiQVsKqr5bvZBKOAaqz3m73iO6ArZoT?usp=share_link)  | 2     |
+| Chat channel: exists                               | [Screenshots](https://drive.google.com/drive/folders/1XQiQVsKqr5bvZBKOAaqz3m73iO6ArZoT?usp=share_link)                                          |  2     |
 | Test cases: a large proportion of the issues related to handling failing cases. | If a test case fails, open an issue and fix it                | 2    |
 | Evidence that the whole team is using the same tools: everyone can get to all tools and files | All team members are making use of PyCharm/VSCode, Github Desktop, Discord, Notion etc   | 3     |
 | Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people) | - | 1     |
