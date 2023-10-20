@@ -193,6 +193,37 @@ Link to the implementation video of the BurnOut application:
   ## Setup Chatbot
       
   
+  In order for the chatbot to work we will need:
+  
+  1.  Pinecone API Key: The Pinecone vector database can store vector embeddings of documents or conversation history, allowing the chatbot to                              retrieve relevant responses based on the user's input.
+  
+  Step 1: Sign up for an account on the [Pinecone](http://pinecone.io/) website.
+  
+  Step 2: Once you are signed up and logged in, on the left side navigation menu click "API Keys".
+  
+  Step 3: Copy the API key displayed on the screen and create an environment variable for that key.
+  
+  Step 4: Now, go back to the "Indexes" tab and create a new index.
+  
+  Step 5: Name it whatever you want and make the dimensions 1024.
+  
+  Step 6: Create the index and copy the environment of the index, we'll need it for later.
+  
+  2.  Replicate API Key: This is how we will apply the Llama2 model for our chatbot.
+  
+  Step 1: Go to the Replicate website and sign up.
+  
+  Step 2: Once you are signed up and logged in, navigate to this link to see your API Key: [https://replicate.com/account/api-tokens]                         (https://replicate.com/account/api-tokens).
+  
+  Step 3: Now you can see the API_KEY. Copy the key and create an environment variable for it.
+  
+  3.  Create an environment variable:
+  
+  -   echo "export API_KEY='YOUR_KEY'" >> ~/.bash_profile
+  
+  -   source ~/.bash_profile
+  
+  -   API_KEY = os.getenv("API_KEY")
   
   # Enhancements
 
