@@ -3,7 +3,7 @@ before_install:
 
 language: python
 env:
-  - CODECOV_TOKEN={{secrets.CODECOV_TOKEN}}
+  - CODECOV_TOKEN=b8d8b00b-83f0-4a99-a058-b4cd9bc7a7ce
 python:
   - "3.9"
 install:
