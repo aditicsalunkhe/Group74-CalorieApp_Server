@@ -8,11 +8,12 @@ import apps
 # from apps import App
 from flask import json
 # from utilities import Utilities
-from flask import render_template, session, url_for, flash, redirect, request, Flask
+from flask import render_template, session, url_for, flash, redirect, request, Flask, jsonify
 from flask_mail import Mail, Message
 from flask_pymongo import PyMongo
 from tabulate import tabulate
 from forms import HistoryForm, RegistrationForm, LoginForm, CalorieForm, UserProfileForm, EnrollForm, ForgotForm, ResetPasswordForm
+from burnbot import get_burnbot_reply
 
 a = apps.App()
 mongo = a.mongo
@@ -774,6 +775,25 @@ def reset_password(token):
         return redirect(url_for('login'))  # Redirect to the login page
     
     return render_template('reset_password.html', form=form, token=token, error=error)
+
+@a.app.route("/get_burnbot", methods= ['POST'])
+def get_burnbot():
+   # ############################
+   # get_chatbot() function is the api endpoint for the burnbot
+   # when chatbot input is send /get_burnbot will be invoked
+   # if user just logged in, there will be no chat history. But if the user is already logged in, chat history will be considered and it will call get_burnbot_reply from burnbot.py"
+   # Input: Query from the user
+   # Output: Answer from the burnbot, while considering the chat history.
+   # ##########################
+  
+   user_message = request.json['user_message']
+   if not session.get('email'):
+       chat_history=[]
+   response = get_burnbot_reply(user_message, chat_history)
+   chat_history.append((user_message, response['answer']))
+
+
+   return jsonify({'response': response})
 
 if __name__ == '__main__':
     a.app.run(debug=True)
